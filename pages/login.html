@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+	<div class="container-center">
+		<div class="form-container">
+			<h2>Login to Your Account</h2>
+			<form id="login-form">
+				<div class="form-group">
+					<label for="login-email">Email:</label>
+					<input type="email" id="login-email" required>
+				</div>
+				<div class="form-group">
+					<label for="login-password">Password:</label>
+					<input type="password" id="login-password" required>
+				</div>
+				<div class="form-group">
+					<label for="login-role">Select Role:</label>
+					<select id="login-role" required>
+						<option value="">Select Role</option>
+						<option value="user">User</option>
+						<option value="businessPerson">Business Person</option>
+						<option value="investor">Investor</option>
+						<option value="banker">Banker</option>
+						<option value="businessAdvisor">Business Advisor</option>
+					</select>
+				</div>
+				<button type="submit">Login</button>
+			</form>
+			<div class="switch-page">
+				<a href="../pages/registration.html">Don't have an account? Register here</a>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="../js/auth.js"></script>
+</body>
+
+</html>
