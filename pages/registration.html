@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+	<div class="container-center">
+		<div class="form-container">
+			<h2>Register as a User, Business Person, Investor, Banker, or Business Advisor</h2>
+
+			<form id="registration-form">
+
+				<div class="form-group">
+					<label for="full-name">Full Name:</label>
+					<input type="text" id="full-name" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" required>
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone Number:</label>
+					<input type="tel" id="phone" required>
+				</div>
+				<div class="form-group">
+					<label for="password">Password:</label>
+					<input type="password" id="password" required>
+				</div>
+
+				<div class="form-group">
+					<label for="role">Select Role:</label>
+					<select id="role" required>
+						<option value="">Select Role</option>
+						<option value="user">User</option>
+						<option value="businessPerson">Business Person</option>
+						<option value="investor">Investor</option>
+						<option value="banker">Banker</option>
+						<option value="businessAdvisor">Business Advisor</option>
+					</select>
+				</div>
+
+				<div class="role-specific" id="businessPerson-fields" style="display: none;">
+					<label for="business-idea">Business Idea/Project Description:</label>
+					<textarea id="business-idea"></textarea>
+				</div>
+
+				<div class="role-specific" id="investor-fields" style="display: none;">
+					<label for="investment-amount">Investment Capacity (in USD):</label>
+					<input type="number" id="investment-amount">
+					<label for="investment-goal">Investment Goals:</label>
+					<textarea id="investment-goal"></textarea>
+				</div>
+
+				<div class="role-specific" id="banker-fields" style="display: none;">
+					<label for="loan-details">Loan Details:</label>
+					<textarea id="loan-details"></textarea>
+				</div>
+
+				<div class="role-specific" id="businessAdvisor-fields" style="display: none;">
+					<label for="advisor-information">Advisor Information:</label>
+					<textarea id="advisor-information"></textarea>
+				</div>
+
+				<button type="submit">Register</button>
+			</form>
+
+			<div class="switch-page">
+				<p>Already have an account? <a href="../pages/login.html">Login here</a></p>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="../js/firebase-config.js"></script>
+	<script type="module" src="../js/auth.js"></script>
+	<script type="module" src="../js/registration.js"></script>
+
+	</script>
+</body>
+
+</html>
